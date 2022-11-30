@@ -85,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   TextButton(
                     onPressed: () async {
                       await preferences?.setBool('isLogin', false);
+                      // ignore: use_build_context_synchronously
                       context.go('/pin');
                     },
                     child: Text(context.l10n.kLogout),
@@ -104,12 +105,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 8.0,
               ),
               _isGridView
-                  ? Expanded(
+                  ? const Expanded(
                       child: Coffee(
                         isGridView: true,
                       ),
                     )
-                  : Expanded(
+                  : const Expanded(
                       child: Coffee(
                         isGridView: false,
                       ),

@@ -41,7 +41,7 @@ class CustomPinCode extends StatelessWidget {
       textStyle: isObscure
           ? context.theme.textTheme.headline4!.copyWith(color: Colors.pink)
           : context.theme.textTheme.headline4,
-      animationDuration: Duration(milliseconds: 300),
+      animationDuration: const Duration(milliseconds: 300),
       enableActiveFill: true,
       focusNode: focusNode,
       pinTheme: PinTheme(
@@ -72,7 +72,7 @@ class CustomPinCode extends StatelessWidget {
         BoxShadow(
           color: Colors.grey.withOpacity(0.2),
           blurRadius: 8,
-          offset: Offset(0, 4),
+          offset: const Offset(0, 4),
         ),
       ],
       onCompleted: onCompleted,

@@ -8,6 +8,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get kLogin => 'Login';
 
   @override
+  String get kLogout => 'Logout';
+
+  @override
   String get kLoginPIN => 'Login PIN';
 
   @override

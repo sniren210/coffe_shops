@@ -5,10 +5,13 @@ class AppLocalizationsId extends AppLocalizations {
   AppLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
-  String get kLogin => 'Login';
+  String get kLogin => 'Masuk';
 
   @override
-  String get kLoginPIN => 'Login PIN';
+  String get kLogout => 'Keluar';
+
+  @override
+  String get kLoginPIN => 'Masuk PIN';
 
   @override
   String get kRequiredPIN => 'PIN Harus di isi';
@@ -29,7 +32,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get kWelcome => 'Selamat datang';
 
   @override
-  String get kCoffee => 'Coffee';
+  String get kCoffee => 'Kopi';
 
   @override
   String get kShowMore => 'Lebih Banyak';

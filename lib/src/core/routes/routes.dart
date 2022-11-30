@@ -24,5 +24,6 @@ final router = GoRouter(
     if (loggedIn) {
       return '/';
     }
+    return null;
   },
 );

@@ -1,10 +1,8 @@
 import 'package:dimy_teknologi_quiz/dimy_teknologi_quiz.dart';
-import 'package:dimy_teknologi_quiz/src/core/utils/validator.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:loader_overlay/loader_overlay.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:provider/provider.dart';
 
@@ -102,12 +100,12 @@ class _PinPageState extends State<PinPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Text(
           context.l10n.kLoginPIN,
           // style: AppTheme.headline1.white,
         ),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4),
           child: CustomPinCode(
@@ -132,7 +130,7 @@ class _PinPageState extends State<PinPage> {
             }
           });
         },
-        rightIcon: Icon(
+        rightIcon: const Icon(
           Icons.backspace,
         ),
         leftButtonFn: () async {
@@ -177,9 +175,10 @@ class _PinPageState extends State<PinPage> {
           }
           await preferences?.setBool('isLogin', true);
 
+          // ignore: use_build_context_synchronously
           context.go('/');
         },
-        leftIcon: Icon(
+        leftIcon: const Icon(
           Icons.check,
         ),
         mainAxisAlignment: MainAxisAlignment.spaceBetween);

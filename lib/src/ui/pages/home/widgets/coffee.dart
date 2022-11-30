@@ -16,7 +16,7 @@ class Coffee extends StatelessWidget {
     final CoffeeRepository repository = context.watch();
 
     if (repository.isFetching) {
-      return Center(
+      return const Center(
         child: CircularProgressIndicator(),
       );
     }

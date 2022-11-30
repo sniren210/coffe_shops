@@ -2,6 +2,8 @@
 //
 //     final coffeHotModel = coffeHotModelFromJson(jsonString);
 
+// ignore_for_file: unnecessary_null_in_if_null_operators
+
 import 'dart:convert';
 
 List<CoffeHotModel> coffeHotModelFromJson(String str) =>
@@ -30,7 +32,7 @@ class CoffeHotModel {
         title: json["title"],
         description: json["description"],
         ingredients: List<String>.from(json["ingredients"].map((x) => x)),
-        image: json["image"] == null ? null : json["image"],
+        image: json["image"] ?? null,
         id: int.parse(json["id"].toString()),
       );
 
@@ -38,7 +40,7 @@ class CoffeHotModel {
         "title": title,
         "description": description,
         "ingredients": List<dynamic>.from(ingredients.map((x) => x)),
-        "image": image == null ? null : image,
+        "image": image ?? null,
         "id": id,
       };
 }

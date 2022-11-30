@@ -1,8 +1,4 @@
-import 'dart:io';
-import 'dart:typed_data';
-
 import 'package:dimy_teknologi_quiz/dimy_teknologi_quiz.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -31,7 +27,7 @@ class Helper {
       BoxShadow(
         color: Colors.grey.withOpacity(0.2),
         blurRadius: 8,
-        offset: Offset(0, 4),
+        offset: const Offset(0, 4),
       ),
     ];
   }
@@ -41,7 +37,7 @@ class Helper {
       BoxShadow(
         color: Colors.grey.withOpacity(0.8),
         blurRadius: 8,
-        offset: Offset(0, 4),
+        offset: const Offset(0, 4),
       ),
     ];
   }
@@ -51,13 +47,13 @@ class Helper {
       BoxShadow(
         color: Colors.deepPurple.withOpacity(0.8),
         blurRadius: 8,
-        offset: Offset(0, 4),
+        offset: const Offset(0, 4),
       ),
     ];
   }
 
   static void setLightAppBar() {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarIconBrightness: Brightness.light,
       statusBarBrightness: Brightness.dark,
       statusBarColor: Colors.transparent,
@@ -65,7 +61,7 @@ class Helper {
   }
 
   static void setDarkAppBar() {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarIconBrightness: Brightness.dark,
       statusBarBrightness: Brightness.light,
       statusBarColor: Colors.transparent,
@@ -73,7 +69,7 @@ class Helper {
   }
 
   static void snackBar(BuildContext context,
-      {required String message, bool isFailure: false, bool isUp: false}) {
+      {required String message, bool isFailure = false, bool isUp = false}) {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(

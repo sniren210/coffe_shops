@@ -27,7 +27,7 @@ class NumericKeyboard extends StatefulWidget {
 
   final EdgeInsets padding;
 
-  NumericKeyboard({
+  const NumericKeyboard({
     Key? key,
     required this.onKeyboardTap,
     this.textColor = Colors.black,
@@ -85,7 +85,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
                   onTap: widget.leftButtonFn,
                   child: Container(
                       alignment: Alignment.center,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       child: widget.leftIcon)),
               _calcButton('0'),
               InkWell(
@@ -93,7 +93,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
                   onTap: widget.rightButtonFn,
                   child: Container(
                       alignment: Alignment.center,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       child: widget.rightIcon))
             ],
           ),
@@ -114,7 +114,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
             shape: BoxShape.circle,
             color: Colors.white.withOpacity(0.3),
           ),
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           child: Text(
             value,
             style: context.theme.textTheme.headline4,

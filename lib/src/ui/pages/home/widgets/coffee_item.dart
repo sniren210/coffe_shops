@@ -108,7 +108,7 @@ class _CoffeeItemState extends State<CoffeeItem> {
                             overflow: TextOverflow.ellipsis,
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Text.rich(
                             TextSpan(
                               text: flag
@@ -131,7 +131,7 @@ class _CoffeeItemState extends State<CoffeeItem> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                         ],
                       ),
                     ),
@@ -196,7 +196,7 @@ class _CoffeeItemState extends State<CoffeeItem> {
                   style: context.theme.textTheme.bodyText1,
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text.rich(

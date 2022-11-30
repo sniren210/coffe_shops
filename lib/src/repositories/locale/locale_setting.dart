@@ -12,12 +12,9 @@ class LocaleSetting with ChangeNotifier {
       preferences?.getString('locale_setting') ?? defaultValue ?? 'en';
 
   Future<void> setValue(String? value) async {
-    print(value);
     if (value == null) {
-      print('ok');
       await preferences!.remove('locale_setting');
     } else {
-      print('ok1');
       await preferences!.setString('locale_setting', value);
     }
 

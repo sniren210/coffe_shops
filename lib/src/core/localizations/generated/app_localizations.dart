@@ -99,6 +99,12 @@ abstract class AppLocalizations {
   /// **'Login'**
   String get kLogin;
 
+  /// No description provided for @kLogout.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get kLogout;
+
   /// No description provided for @kLoginPIN.
   ///
   /// In en, this message translates to:

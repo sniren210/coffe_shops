@@ -1,0 +1,11 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_web_libraries_in_flutter: false
+
+analyzer:
+  exclude:
+    - lib/**.g.dart
+    - bin/**.dart
+    - lib/src/core/localizations/**

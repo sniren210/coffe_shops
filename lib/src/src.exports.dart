@@ -4,6 +4,8 @@
 // genexp
 
 export 'core/core.exports.dart';
+export 'models/models.exports.dart';
 export 'repositories/repositories.exports.dart';
+export 'services/services.exports.dart';
 export 'src.exports.dart';
 export 'ui/ui.exports.dart';

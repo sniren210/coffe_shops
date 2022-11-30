@@ -5,3 +5,4 @@
 
 export 'home.exports.dart';
 export 'home_page.dart';
+export 'widgets/widgets.exports.dart';

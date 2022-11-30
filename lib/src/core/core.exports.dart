@@ -7,4 +7,5 @@ export 'core.exports.dart';
 export 'extensions/extensions.exports.dart';
 export 'localizations/localizations.exports.dart';
 export 'routes/routes.exports.dart';
+export 'state/state.exports.dart';
 export 'utils/utils.exports.dart';

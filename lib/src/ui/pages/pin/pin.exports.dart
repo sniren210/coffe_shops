@@ -3,6 +3,6 @@
 // run :
 // genexp
 
-export 'helper.dart';
-export 'image_generator.dart';
-export 'utils.exports.dart';
+export 'pin.exports.dart';
+export 'pin_page.dart';
+export 'widget/widget.exports.dart';

@@ -3,6 +3,4 @@
 // run :
 // genexp
 
-export 'helper.dart';
-export 'image_generator.dart';
-export 'utils.exports.dart';
+export 'coffee_repository.dart';

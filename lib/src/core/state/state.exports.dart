@@ -3,6 +3,5 @@
 // run :
 // genexp
 
-export 'helper.dart';
-export 'image_generator.dart';
-export 'utils.exports.dart';
+export 'list_change_notifier_provider.dart';
+export 'single_change_norifier_provider.dart';

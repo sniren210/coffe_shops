@@ -18,6 +18,8 @@ ThemeData get lightTheme {
       onSecondary: Colors.white,
       tertiary: Colors.green,
       onTertiary: Colors.white,
+      error: Colors.red,
+      onError: Colors.white,
     ),
     tabBarTheme: const TabBarTheme(
       labelColor: Colors.black,
@@ -26,7 +28,7 @@ ThemeData get lightTheme {
       ),
     ),
     cardTheme: const CardTheme(
-      color: Color.fromARGB(255, 233, 232, 232),
+      color: Color.fromARGB(255, 223, 217, 217),
       elevation: 10,
       clipBehavior: Clip.antiAlias,
     ),

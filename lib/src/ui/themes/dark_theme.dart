@@ -20,6 +20,8 @@ ThemeData get darkTheme {
       onSecondary: Colors.white,
       tertiary: Colors.green,
       onTertiary: Colors.white,
+      error: Colors.red,
+      onError: Colors.black,
     ),
     tabBarTheme: const TabBarTheme(
       labelColor: Colors.white,

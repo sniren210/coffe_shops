@@ -5,6 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 extension SizedContext on BuildContext {
+  Size get appSize => MediaQuery.of(this).size;
+
   DeviceScreenType get devices => getDeviceType(MediaQuery.of(this).size);
 
   bool get isDevicesSmallPhone => DeviceScreenType.watch == devices;

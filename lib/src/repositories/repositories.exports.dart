@@ -3,6 +3,7 @@
 // run :
 // genexp
 
+export 'coffee/coffee.exports.dart';
 export 'locale/locale.exports.dart';
 export 'repositories.exports.dart';
 export 'theme/theme.exports.dart';

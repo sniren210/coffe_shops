@@ -1,5 +1,6 @@
 import 'package:dimy_teknologi_quiz/dimy_teknologi_quiz.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -12,13 +13,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  bool _isGridView = false;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +21,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final localeRepository = context.watch<LocaleSetting>();
 
+    final repository = context.watch<CoffeeRepository>();
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Home'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -73,24 +70,53 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              context.l10n.kTextCountTitle,
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      body: RefreshIndicator(
+        onRefresh: () async {
+          await repository.fetch();
+        },
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: context.padding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Text('Selamat datang 2022'),
+                  TextButton(
+                    onPressed: () async {
+                      await preferences?.setBool('isLogin', false);
+                      context.go('/pin');
+                    },
+                    child: Text('Logout'),
+                  )
+                ],
+              ),
+              HeaderCoffeeList(
+                length: repository.isFetching ? 0 : repository.value.length,
+                isGridView: _isGridView,
+                onChanged: (isGridView) {
+                  setState(() {
+                    _isGridView = isGridView;
+                  });
+                },
+              ),
+              const SizedBox(
+                height: 8.0,
+              ),
+              _isGridView
+                  ? Expanded(
+                      child: Coffee(
+                        isGridView: true,
+                      ),
+                    )
+                  : Expanded(
+                      child: Coffee(
+                        isGridView: false,
+                      ),
+                    ),
+            ],
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: context.l10n.kIncrement,
-        child: const Icon(Icons.add),
       ),
     );
   }

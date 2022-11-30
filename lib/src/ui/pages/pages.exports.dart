@@ -5,3 +5,4 @@
 
 export 'home/home.exports.dart';
 export 'pages.exports.dart';
+export 'pin/pin.exports.dart';

@@ -67,7 +67,10 @@ class _CoffeeItemState extends State<CoffeeItem> {
                             widget.coffee.image ?? kEmptyImageLink,
                             fit: BoxFit.cover,
                             errorBuilder: (context, error, stackTrace) {
-                              return Image.network(kEmptyImageLink);
+                              return Image.network(
+                                kEmptyImageLink,
+                                fit: BoxFit.cover,
+                              );
                             },
                           ),
                         ),
@@ -154,7 +157,10 @@ class _CoffeeItemState extends State<CoffeeItem> {
                       widget.coffee.image ?? kEmptyImageLink,
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) {
-                        return Image.network(kEmptyImageLink);
+                        return Image.network(
+                          kEmptyImageLink,
+                          fit: BoxFit.cover,
+                        );
                       },
                     ),
                   ),

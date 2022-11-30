@@ -3,6 +3,11 @@
 DIMY TEKNOLOGI
 PROGRAMMER MOBILE QUIZ
 
+dapat di jalanlkan di platform
+- WEB
+- Android
+- Ios
+
 ## Screenshot
 
 

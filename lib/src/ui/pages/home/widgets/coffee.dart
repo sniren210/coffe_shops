@@ -36,20 +36,6 @@ class Coffee extends StatelessWidget {
           );
         },
       );
-
-      // return GridView.count(
-      //   crossAxisCount: 2,
-      //   children: repository.value
-      //       .map<Widget>(
-      //         (e) => CoffeeItem(
-      //           isGridView: isGridView,
-      //           coffee: e,
-      //           onTap: () {},
-      //           onDelete: () async {},
-      //         ),
-      //       )
-      //       .toList(),
-      // );
     } else {
       return PhoneWidthWidget(
         child: CustomScrollView(
@@ -70,17 +56,6 @@ class Coffee extends StatelessWidget {
           ],
         ),
       );
-      // return ListView.builder(
-      //   itemCount: repository.value.length,
-      //   itemBuilder: (context, index) {
-      //     return CoffeeItem(
-      //       isGridView: isGridView,
-      //       coffee: repository.value[index],
-      //       onTap: () {},
-      //       onDelete: () async {},
-      //     );
-      //   },
-      // );
     }
   }
 }

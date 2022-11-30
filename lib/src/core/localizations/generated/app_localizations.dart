@@ -5,10 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'app_localizations_ar.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_id.dart';
-import 'app_localizations_ja.dart';
 
 /// Callers can lookup localized strings with an instance of AppLocalizations
 /// returned by `AppLocalizations.of(context)`.
@@ -91,29 +89,75 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('ar'),
     Locale('en'),
-    Locale('id'),
-    Locale('ja')
+    Locale('id')
   ];
 
-  /// No description provided for @kAppName.
+  /// No description provided for @kLogin.
   ///
   /// In en, this message translates to:
-  /// **'Boilerplate'**
-  String get kAppName;
+  /// **'Login'**
+  String get kLogin;
 
-  /// No description provided for @kTextCountTitle.
+  /// No description provided for @kLoginPIN.
   ///
   /// In en, this message translates to:
-  /// **'You have pushed the button this many times:'**
-  String get kTextCountTitle;
+  /// **'Login PIN'**
+  String get kLoginPIN;
 
-  /// No description provided for @kIncrement.
+  /// No description provided for @kRequiredPIN.
   ///
   /// In en, this message translates to:
-  /// **'Increment'**
-  String get kIncrement;
+  /// **'PIN Required'**
+  String get kRequiredPIN;
+
+  /// No description provided for @kDigitPIN.
+  ///
+  /// In en, this message translates to:
+  /// **'PIN must be 4 Digits!'**
+  String get kDigitPIN;
+
+  /// No description provided for @kNumberPIN.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a number'**
+  String get kNumberPIN;
+
+  /// No description provided for @kUserNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'User not registered'**
+  String get kUserNotFound;
+
+  /// No description provided for @kHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get kHome;
+
+  /// No description provided for @kWelcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get kWelcome;
+
+  /// No description provided for @kCoffee.
+  ///
+  /// In en, this message translates to:
+  /// **'Coffee'**
+  String get kCoffee;
+
+  /// No description provided for @kShowMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Show More'**
+  String get kShowMore;
+
+  /// No description provided for @kShowLess.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Less'**
+  String get kShowLess;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -125,7 +169,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'en', 'id', 'ja'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'id'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -136,10 +180,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'ar': return AppLocalizationsAr();
     case 'en': return AppLocalizationsEn();
     case 'id': return AppLocalizationsId();
-    case 'ja': return AppLocalizationsJa();
   }
 
   throw FlutterError(

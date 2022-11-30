@@ -1,5 +1,14 @@
 {
-  "kAppName": "Boilerplate",
-  "kTextCountTitle": "You have pushed the button this many times:",
-  "kIncrement": "Increment"
+  "kLogin": "Login",
+  "kLogout": "Logout",
+  "kLoginPIN": "Login PIN",
+  "kRequiredPIN": "PIN Required",
+  "kDigitPIN": "PIN must be 4 Digits!",
+  "kNumberPIN": "Please enter a number",
+  "kUserNotFound": "User not registered",
+  "kHome": "Home",
+  "kWelcome": "Welcome",
+  "kCoffee": "Coffee",
+  "kShowMore": "Show More",
+  "kShowLess": "Show Less"
 }

@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text(context.l10n.kHome),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -81,13 +81,13 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Row(
                 children: [
-                  Text('Selamat datang 2022'),
+                  Text('${context.l10n.kWelcome} 2022'),
                   TextButton(
                     onPressed: () async {
                       await preferences?.setBool('isLogin', false);
                       context.go('/pin');
                     },
-                    child: Text('Logout'),
+                    child: Text(context.l10n.kLogout),
                   )
                 ],
               ),

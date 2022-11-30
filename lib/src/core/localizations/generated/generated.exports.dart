@@ -4,8 +4,6 @@
 // genexp
 
 export 'app_localizations.dart';
-export 'app_localizations_ar.dart';
 export 'app_localizations_en.dart';
 export 'app_localizations_id.dart';
-export 'app_localizations_ja.dart';
 export 'generated.exports.dart';

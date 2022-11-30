@@ -24,10 +24,7 @@ class HeaderCoffeeList extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Text(
-              //   '${context.l10n.kShowing(' ')} $paymentMethods ${context.l10n.kPaymentMethod.toLowerCase()}',
-              // ),
-              Text('Coffe ${length ?? ''}'),
+              Text('${context.l10n.kCoffee} ${length ?? ''}'),
               Row(
                 children: [
                   Container(

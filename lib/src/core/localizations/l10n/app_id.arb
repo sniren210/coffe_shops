@@ -1,5 +1,14 @@
 {
-  "kAppName": "Boilerplate",
-  "kTextCountTitle": "Anda telah menekan tombol ini berkali-kali:",
-  "kIncrement": "Tambah"
+  "kLogin": "Masuk",
+  "kLogout": "Keluar",
+  "kLoginPIN": "Masuk PIN",
+  "kRequiredPIN": "PIN Harus di isi",
+  "kDigitPIN": "PIN harus 4 Digit!",
+  "kNumberPIN": "Tolong masukan angka",
+  "kUserNotFound": "User tidak terdaftar",
+  "kHome": "Home",
+  "kWelcome": "Selamat datang",
+  "kCoffee": "Coffee",
+  "kShowMore": "Lebih Banyak",
+  "kShowLess": "Lebih Sedikit"
 }

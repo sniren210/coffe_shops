@@ -40,7 +40,7 @@ class _PinPageState extends State<PinPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: Text(context.l10n.kLogin),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -104,7 +104,7 @@ class _PinPageState extends State<PinPage> {
       children: [
         SizedBox(height: 24),
         Text(
-          'Login PIN',
+          context.l10n.kLoginPIN,
           // style: AppTheme.headline1.white,
         ),
         SizedBox(height: 24),
@@ -140,7 +140,7 @@ class _PinPageState extends State<PinPage> {
             errorController!.add(ErrorAnimationType.shake);
             Helper.snackBar(
               context,
-              message: 'PIN Harus di isi',
+              message: context.l10n.kRequiredPIN,
               isFailure: true,
             );
             return;
@@ -150,7 +150,7 @@ class _PinPageState extends State<PinPage> {
             errorController!.add(ErrorAnimationType.shake);
             Helper.snackBar(
               context,
-              message: 'PIN harus 4 Digit!',
+              message: context.l10n.kDigitPIN,
               isFailure: true,
             );
             return;
@@ -160,7 +160,7 @@ class _PinPageState extends State<PinPage> {
             errorController!.add(ErrorAnimationType.shake);
             Helper.snackBar(
               context,
-              message: 'Tolong masukan angka',
+              message: context.l10n.kNumberPIN,
               isFailure: true,
             );
             return;
@@ -170,7 +170,7 @@ class _PinPageState extends State<PinPage> {
             errorController!.add(ErrorAnimationType.shake);
             Helper.snackBar(
               context,
-              message: 'User tidak terdaftar',
+              message: context.l10n.kUserNotFound,
               isFailure: true,
             );
             return;

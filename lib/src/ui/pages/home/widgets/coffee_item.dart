@@ -30,7 +30,6 @@ class _CoffeeItemState extends State<CoffeeItem> {
   @override
   void initState() {
     super.initState();
-    // _scrollController.addListener(_onScroll);
 
     if (widget.coffee.description.length > 100) {
       firstHalf = widget.coffee.description.substring(0, 100);
@@ -118,7 +117,9 @@ class _CoffeeItemState extends State<CoffeeItem> {
                               children: <InlineSpan>[
                                 if (isMore)
                                   TextSpan(
-                                    text: flag ? '  Show more' : ' Show less',
+                                    text: flag
+                                        ? ' ${context.l10n.kShowMore}'
+                                        : ' ${context.l10n.kShowLess}',
                                     style: const TextStyle(color: Colors.grey),
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
@@ -204,7 +205,9 @@ class _CoffeeItemState extends State<CoffeeItem> {
                     children: <InlineSpan>[
                       if (isMore)
                         TextSpan(
-                          text: flag ? '  Show more' : ' Show less',
+                          text: flag
+                              ? ' ${context.l10n.kShowMore}'
+                              : ' ${context.l10n.kShowLess}',
                           style: const TextStyle(color: Colors.grey),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
